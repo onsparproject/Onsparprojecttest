@@ -7,3 +7,4 @@ urlpatterns = [
         #Root url
         url(r'^$', views.product_list, name='product_list'),
         ]
+

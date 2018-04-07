@@ -114,9 +114,14 @@
           </li>
 
           <li>
-              <a href="{% url "login" %}">
-                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Login
-              </a>
+              <span class="user">
+    {% if request.user.is_authenticated %}
+      Hello {{ request.user.first_name }},
+      <a href="{% url "logout" %}">Logout</a>
+    {% else %}
+      <a href="{% url "login" %}">Log-in</a>
+    {% endif %}
+  </span>
           </li>
         </ul>
         </div>

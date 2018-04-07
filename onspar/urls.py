@@ -24,12 +24,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^portfolio/', include('portfolio.urls')),
     url(r'', include('portfolio.urls', namespace='portfolio')),
+
 # Shop App URLs
     # Below is likely URL but will need to update
     url(r'^shop/', include('shop.urls', namespace='shop')),
 ]
 
 
-#if settings.DEBUG:
- #   urlpatterns += static(settings.MEDIA_URL,
-  #                        document_root=settings.MEDIA_ROOT)
